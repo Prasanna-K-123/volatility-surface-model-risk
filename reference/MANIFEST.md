@@ -10,7 +10,7 @@ This directory pins the recruiter-facing **reference result** independently of t
 - Full raw `get_book_summary_by_currency` payload SHA-256: `9848861a047d1b3e4140506fbc6eaefbc6747074564dd5baeee98de7e158a66e`
 - Full raw `get_instruments` payload SHA-256: `78a285534f0354af87a854b2ac8ac42fe623d7d3a23507ba8104c0dd54c77a84`
 
-The accepted private validation run retained the complete raw responses. For this standalone recruiter-facing repository, `accepted_snapshot_inputs.csv.gz` pins all **978 merged option rows** and the exact pre-filter fields consumed by `clean_surface_universe`; CI therefore reruns the documented filtering and derived-variable pipeline before calibration. No redundant post-filter binary snapshot is required for reproduction.
+The accepted validation run retained the complete raw responses. For this standalone recruiter-facing repository, `accepted_snapshot_inputs.csv.gz` pins all **978 merged option rows** and the exact pre-filter fields consumed by `clean_surface_universe`; CI therefore reruns the documented filtering and derived-variable pipeline before calibration. No redundant post-filter binary snapshot is required for reproduction.
 
 ## Reference outputs
 
@@ -22,6 +22,6 @@ The committed reference tables pin the accepted downstream evidence:
 - `research_summary.json`
 - `snapshot_metadata.json`
 
-`python verify_reference.py` reruns filtering, calibration, holdout comparison, static/calendar diagnostics and the hedging experiment from `accepted_snapshot_inputs.csv.gz`. It verifies the recruiter-facing evidence at the level actually claimed: fitted expiry identities, holdout/full-fit errors, baseline wins, curve-shape diagnostics, calendar checks and hedging errors. Raw SVI parameter values are deliberately not used as exact reproduction gates because weakly identified slices can move materially in parameter space without changing the fitted curve evidence; the project explicitly does not assign those raw parameters economic meaning.
+`python verify_reference.py` reruns filtering, calibration, holdout comparison, static/calendar diagnostics and the hedging experiment from `accepted_snapshot_inputs.csv.gz`. It verifies fitted-expiry identity, held-out/full-fit errors, baseline wins, observed-support shape diagnostics, calendar checks and hedging errors against the accepted evidence. Raw-SVI extrapolation quantities are not required to reproduce digit-for-digit on weakly identified slices; instead, their structural positivity and wing-slope constraints must remain satisfied. The project explicitly does not assign raw SVI parameters economic meaning.
 
 A separate `python run_vol_research.py` execution intentionally queries the **current** Deribit market and is a new experiment, not a reproduction of the dated reference snapshot.
