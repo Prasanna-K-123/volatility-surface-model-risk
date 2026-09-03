@@ -1,6 +1,20 @@
 # Derivatives Volatility Surface, Static Arbitrage & Hedging Model Risk
 
+[![Validation](https://github.com/Prasanna-K-123/volatility-surface-model-risk/actions/workflows/validation.yml/badge.svg?branch=main)](https://github.com/Prasanna-K-123/volatility-surface-model-risk/actions/workflows/validation.yml)
+
 A reproducible derivatives-research project built around a timestamped public Deribit BTC option-chain snapshot. It calibrates structurally constrained raw-SVI total-variance slices, evaluates them on an alternating-strike holdout against a simpler quadratic baseline, challenges fitted surfaces with observed-support call-shape and common-grid calendar diagnostics, and separates real-market calibration evidence from a controlled delta-hedging model-risk simulation.
+
+## Recruiter snapshot
+
+| Signal | Verified evidence |
+|---|---|
+| Market snapshot | **978** timestamped raw option rows → **466** frozen-filter rows → **6** fitted BTC expiries |
+| Complexity challenge | median SVI holdout RMSE **0.00017263** vs quadratic **0.00032092** total variance; SVI wins only **4/6** expiries |
+| Static/calendar diagnostics | **0** observed-support call-monotonicity violations, **0** call-convexity violations and **0** common-grid calendar violating points |
+| Model-risk experiment | hourly correct-vol mean absolute replication error about **0.100% of spot** vs about **1.15%** under ±10 volatility-point misspecification |
+| Negative evidence retained | nearest two expiries favor the simpler quadratic baseline; **2/6** full fits place raw-SVI `m` outside observed support, so raw parameters are not given economic meaning |
+
+**Direct evidence:** [`reference manifest`](reference/MANIFEST.md) · [`SVI fit summary`](reference/svi_fit_summary.csv) · [`calendar diagnostics`](reference/calendar_arbitrage_diagnostics.csv) · [`hedging model risk`](reference/delta_hedging_model_risk.csv) · [`adversarial results audit`](docs/RESULTS_AUDIT.md)
 
 ## Validated reference snapshot
 
