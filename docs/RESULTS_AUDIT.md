@@ -31,9 +31,11 @@ The common log-moneyness calendar diagnostic over adjacent fitted expiries repor
 
 ## Parameter identifiability warning
 
-Two of six full-sample fits place the raw-SVI center parameter `m` outside the observed log-moneyness range. One near-dated slice also has `sigma / observed-k-span` above 8.5. The corresponding curves still satisfy the structural and observed-support shape diagnostics, but individual raw-SVI parameter values are therefore treated as **weakly identified curve parameters rather than economically interpretable quantities**.
+Two of six full-sample fits place the raw-SVI center parameter `m` outside the observed log-moneyness range. One near-dated slice also has a very large `sigma / observed-k-span` (above 8 in the accepted fit). The corresponding curves still satisfy the structural and observed-support shape diagnostics, but individual raw-SVI parameter values are therefore treated as **weakly identified curve parameters rather than economically interpretable quantities**.
 
-This is why the recruiter-facing evidence emphasizes held-out curve error, baseline comparison and shape diagnostics instead of reporting raw parameter values as findings.
+Numerically equivalent reruns may move raw-parameter-derived extrapolation quantities while leaving the held-out errors and observed-support curve evidence essentially unchanged. Validation therefore requires the structural raw-SVI constraints to remain satisfied and gates the stable recruiter-facing curve evidence directly rather than requiring digit-for-digit raw-parameter identity.
+
+This is why the recruiter-facing evidence emphasizes held-out curve error, baseline comparison and observed-support shape diagnostics instead of reporting raw parameter values as findings.
 
 ## Delta-hedging model-risk experiment
 
@@ -53,7 +55,7 @@ The controlled result behaves as expected: discrete hedging error grows material
 
 ## Accepted conclusion
 
-FLAGSHIP-VOL-001 is accepted as **private research evidence** for derivatives/volatility/strats positioning, subject to the following recruiter-facing boundary:
+FLAGSHIP-VOL-001 is accepted as **research evidence** for derivatives/volatility/strats positioning, subject to the following recruiter-facing boundary:
 
 1. claim a timestamped, source-hashed Deribit BTC option-surface study;
 2. claim structurally constrained SVI calibration with alternating-strike holdout and a quadratic baseline challenge;
