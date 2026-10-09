@@ -30,6 +30,8 @@ jobs:
         run: python -m pytest tests -q
       - name: Reproduce accepted reference snapshot
         run: python verify_reference.py
+      - name: Cost-aware hedging scenarios
+        run: python run_cost_aware_hedging.py
       - name: Evidence inventory
         if: always()
         run: |

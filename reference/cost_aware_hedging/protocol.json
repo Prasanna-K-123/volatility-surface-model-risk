@@ -1,0 +1,12 @@
+{
+  "paths": 3000,
+  "steps": 720,
+  "seed": 20261009,
+  "spot": 100.0,
+  "true_sigma": 0.55,
+  "maturity_days": 30,
+  "model": "GBM, zero rates, European ATM call; short option hedge PnL",
+  "initial_and_terminal_costs": true,
+  "scenarios": 27,
+  "limitations": "Constant volatility and proportional costs; no spread dynamics, jumps, market impact or real executions."
+}

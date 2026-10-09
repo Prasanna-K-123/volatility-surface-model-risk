@@ -1,5 +1,15 @@
 # Derivatives Volatility Surface, Static Arbitrage & Hedging Model Risk
 
+## Evidence release — 2026-10-09
+
+[27 cost-aware hedge scenarios](reference/cost_aware_hedging/scenarios.csv) · [Simulation protocol](reference/cost_aware_hedging/protocol.json) · `python run_cost_aware_hedging.py`
+
+The extension uses 3,000 common GBM paths, three hedge volatilities, three rebalancing intervals and three proportional cost levels. It charges the initial hedge and terminal liquidation and reports turnover, net-PnL RMSE and Monte Carlo intervals. This is controlled model-risk analysis, not a trading backtest.
+
+[Research scope and next extension](docs/EVIDENCE_REVIEW.md)
+
+---
+
 [![Validation](https://github.com/Prasanna-K-123/volatility-surface-model-risk/actions/workflows/validation.yml/badge.svg?branch=main)](https://github.com/Prasanna-K-123/volatility-surface-model-risk/actions/workflows/validation.yml)
 
 A reproducible derivatives-research project built around a timestamped public Deribit BTC option-chain snapshot. It calibrates structurally constrained raw-SVI total-variance slices, evaluates them on an alternating-strike holdout against a simpler quadratic baseline, challenges fitted surfaces with observed-support call-shape and common-grid calendar diagnostics, and separates real-market calibration evidence from a controlled delta-hedging model-risk simulation.
