@@ -21,3 +21,14 @@ Check the source data and split before interpreting a score. Compare the stronge
 ## Next research extension
 
 Collect multiple dated option snapshots, validate smile interpolation under temporal shifts and compare jump/stochastic-volatility simulations. Cost-aware GBM diagnostics are a completed extension, not a substitute for market execution data.
+
+## October 10 analytic challenge — executed
+
+The frozen-parameter analytic-density scan finds outside-support failures in
+2/6 smiles and stressed variance-order failures in 2/5 adjacent expiry pairs.
+Observed/common-observed scans retain zero detected failures. A new explicit
+observed-support evaluator rejects extrapolation, with independent
+call-differentiation and counterexample tests. See
+[the full method, outputs and limits](EXTRAPOLATION_AUDIT.md). This invalidates
+any inference of globally safe extrapolation from the original structural
+constraints; no observed-market arbitrage or new holdout improvement is claimed.

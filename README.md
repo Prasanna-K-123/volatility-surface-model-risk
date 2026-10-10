@@ -1,5 +1,11 @@
 # Derivatives Volatility Surface, Static Arbitrage & Hedging Model Risk
 
+## Analytic extrapolation challenge — 2026-10-10
+
+The frozen fits pass sampled analytic-density checks on observed support, but **2/6 smiles fail** when extrapolated over `k ∈ [-3, 3]`; **2/5 adjacent pairs** also fail the stressed variance-order diagnostic. These are outside-support model failures, not observed executable market arbitrage. A new `SupportedSVISlice` API rejects unsupported extrapolation; finite-grid passes remain diagnostics, not a global proof.
+
+[Full adverse-result audit](docs/EXTRAPOLATION_AUDIT.md) · [Frozen result and protocol](reference/density_audit/summary.json) · `python run_density_audit.py`
+
 ## Evidence release — 2026-10-09
 
 [27 cost-aware hedge scenarios](reference/cost_aware_hedging/scenarios.csv) · [Simulation protocol](reference/cost_aware_hedging/protocol.json) · `python run_cost_aware_hedging.py`
@@ -41,6 +47,8 @@ The accepted reference snapshot was captured at **2026-09-02T10:23:28Z** and its
 - **0** common-grid calendar violating points across adjacent fitted expiries.
 
 The two nearest expiries are a useful negative result: the simple quadratic holdout baseline slightly outperforms SVI. Two of six full fits also place raw-SVI `m` outside the observed log-moneyness range, so individual raw parameters are not interpreted economically when the slice is weakly identified.
+
+The alternating-strike test includes **3 boundary-extrapolation points among 116 held-out strikes**, in three expiries. It measures held-out strike prediction, rather than pure interpolation; [the split audit](reference/density_audit/split_diagnostics.csv) records the exact training and test ranges.
 
 ## Research architecture
 

@@ -1,0 +1,34 @@
+{
+  "protocol_version": 1,
+  "source_file": "reference/svi_fit_summary.csv",
+  "source_sha256": "64ebdb528d84954d1a5456ea91771b37d125438aa7fadfa817a38e8de88c75df",
+  "snapshot_input_sha256": "de038e4dac9f2c7b035050c92f40560c2843d71f3bdc9dc71a71234002a3da3d",
+  "source_snapshot_utc": "2026-09-02T10:23:28Z",
+  "calibration": "Frozen published parameters; no new fit or holdout tuning",
+  "method_reference": "https://arxiv.org/abs/1204.0646, equation (2.1)",
+  "grid_protocol": {
+    "observed_points": 4001,
+    "stress_min": -3.0,
+    "stress_max": 3.0,
+    "stress_points": 12001,
+    "negative_tolerance": 1e-10
+  },
+  "fitted_slices": 6,
+  "observed_slices_with_negative_g": 0,
+  "stress_slices_with_negative_g": 2,
+  "adjacent_pairs": 5,
+  "common_observed_pairs_with_negative_variance_increment": 0,
+  "stress_pairs_with_negative_variance_increment": 2,
+  "support_guard_rejected_all_outside_requests": true,
+  "holdout_test_strikes": 116,
+  "holdout_test_strikes_outside_training_support": 3,
+  "holdout_slices_with_boundary_extrapolation": 3,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0"
+  },
+  "interpretation": "Outside-support failures refute global safety of these frozen raw-SVI fits. They are not observed executable market arbitrage. Finite-grid passes are not global proofs. Cross-expiry variance ordering is a model diagnostic under a common-moneyness convention, not a carry-independent trading claim.",
+  "deployment_decision": "Use SupportedSVISlice for bounded interpolation; reject unsupported extrapolation. Raw functions remain diagnostic research primitives; this guard has not been wired into a production pricing service."
+}
