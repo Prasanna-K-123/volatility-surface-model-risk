@@ -21,7 +21,8 @@ def shape(value, depth=0):
 
 def main():
     ROOT.mkdir(parents=True, exist_ok=True)
-    with urllib.request.urlopen(META_URL, timeout=30) as response:
+    request = urllib.request.Request(META_URL, headers={'User-Agent': 'academic-research-source-metadata/1.0'})
+    with urllib.request.urlopen(request, timeout=30) as response:
         files = json.load(response)
     candidates = [f for f in files if f.get('filename') == NAME]
     if len(candidates) != 1:
@@ -29,10 +30,14 @@ def main():
     metadata = candidates[0]
     url = metadata['content_details']['download_url']
     path = ROOT / NAME
-    with urllib.request.urlopen(url, timeout=60) as response:
+    request = urllib.request.Request(url, headers={'User-Agent': 'academic-research-source-metadata/1.0'})
+    with urllib.request.urlopen(request, timeout=60) as response:
         body = response.read(50_000_001)
     if len(body) > 50_000_000:
         raise RuntimeError('Archive exceeds bounded registered-source collection')
+    expected = metadata['content_details']['sha256_hash']
+    if hashlib.sha256(body).hexdigest() != expected or len(body) != metadata['content_details']['size']:
+        raise RuntimeError('Archive differs from authoritative size/hash')
     path.write_bytes(body)
     entries, previews = [], []
     with libarchive.file_reader(str(path)) as archive:
