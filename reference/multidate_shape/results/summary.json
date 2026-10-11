@@ -1,0 +1,210 @@
+{
+  "study": "multidate-shape-2018-cc0-v1",
+  "registered_days": 10,
+  "observed_days": 9,
+  "missing_days": [
+    "2018-12-09"
+  ],
+  "source_doi": "10.17632/hfd4b8zfw6.2",
+  "source_licence": "CC0-1.0",
+  "input_sha256": "137cffb2923ac7e38047c3001fe58cee5576543e7b946450f25cbd02155234ac",
+  "raw_option_rows": 1868,
+  "eligible_option_rows": 796,
+  "eligible_date_expiries": 27,
+  "heldout_strikes": 195,
+  "interior_strikes": 182,
+  "boundary_strikes": 13,
+  "common_interior_strikes": 182,
+  "fit_records": 216,
+  "failed_fit_records": 0,
+  "methods": [
+    "raw_svi",
+    "quadratic",
+    "convex_call",
+    "joint_ssvi"
+  ],
+  "aggregated_metrics": [
+    {
+      "model": "convex_call",
+      "domain": "boundary",
+      "date_expiry_groups": 13,
+      "scored_groups": 0,
+      "n_expected": 13,
+      "n_scored": 0,
+      "n_refused": 13,
+      "macro_mean_rmse_total_variance": null,
+      "macro_mean_rmse_iv_pp": null,
+      "macro_mean_rmse_normalized_call": null
+    },
+    {
+      "model": "convex_call",
+      "domain": "common_interior",
+      "date_expiry_groups": 27,
+      "scored_groups": 27,
+      "n_expected": 182,
+      "n_scored": 182,
+      "n_refused": 0,
+      "macro_mean_rmse_total_variance": 0.007620336391000051,
+      "macro_mean_rmse_iv_pp": 4.238808980860121,
+      "macro_mean_rmse_normalized_call": 0.003389693216917872
+    },
+    {
+      "model": "convex_call",
+      "domain": "interior",
+      "date_expiry_groups": 27,
+      "scored_groups": 27,
+      "n_expected": 182,
+      "n_scored": 182,
+      "n_refused": 0,
+      "macro_mean_rmse_total_variance": 0.007620336391000051,
+      "macro_mean_rmse_iv_pp": 4.238808980860121,
+      "macro_mean_rmse_normalized_call": 0.003389693216917872
+    },
+    {
+      "model": "joint_ssvi",
+      "domain": "boundary",
+      "date_expiry_groups": 13,
+      "scored_groups": 13,
+      "n_expected": 13,
+      "n_scored": 13,
+      "n_refused": 0,
+      "macro_mean_rmse_total_variance": 0.01760713193834025,
+      "macro_mean_rmse_iv_pp": 12.089469107003469,
+      "macro_mean_rmse_normalized_call": 0.0026570668413468993
+    },
+    {
+      "model": "joint_ssvi",
+      "domain": "common_interior",
+      "date_expiry_groups": 27,
+      "scored_groups": 27,
+      "n_expected": 182,
+      "n_scored": 182,
+      "n_refused": 0,
+      "macro_mean_rmse_total_variance": 0.006872403197778753,
+      "macro_mean_rmse_iv_pp": 3.9785954590177255,
+      "macro_mean_rmse_normalized_call": 0.002776680218184424
+    },
+    {
+      "model": "joint_ssvi",
+      "domain": "interior",
+      "date_expiry_groups": 27,
+      "scored_groups": 27,
+      "n_expected": 182,
+      "n_scored": 182,
+      "n_refused": 0,
+      "macro_mean_rmse_total_variance": 0.006872403197778753,
+      "macro_mean_rmse_iv_pp": 3.9785954590177255,
+      "macro_mean_rmse_normalized_call": 0.002776680218184424
+    },
+    {
+      "model": "quadratic",
+      "domain": "boundary",
+      "date_expiry_groups": 13,
+      "scored_groups": 13,
+      "n_expected": 13,
+      "n_scored": 13,
+      "n_refused": 0,
+      "macro_mean_rmse_total_variance": 0.011610819016686195,
+      "macro_mean_rmse_iv_pp": 7.350653028524381,
+      "macro_mean_rmse_normalized_call": 0.0018265108087121946
+    },
+    {
+      "model": "quadratic",
+      "domain": "common_interior",
+      "date_expiry_groups": 27,
+      "scored_groups": 27,
+      "n_expected": 182,
+      "n_scored": 182,
+      "n_refused": 0,
+      "macro_mean_rmse_total_variance": 0.002897386397991438,
+      "macro_mean_rmse_iv_pp": 2.264356785338236,
+      "macro_mean_rmse_normalized_call": 0.0012103042496749898
+    },
+    {
+      "model": "quadratic",
+      "domain": "interior",
+      "date_expiry_groups": 27,
+      "scored_groups": 27,
+      "n_expected": 182,
+      "n_scored": 182,
+      "n_refused": 0,
+      "macro_mean_rmse_total_variance": 0.002897386397991438,
+      "macro_mean_rmse_iv_pp": 2.264356785338236,
+      "macro_mean_rmse_normalized_call": 0.0012103042496749898
+    },
+    {
+      "model": "raw_svi",
+      "domain": "boundary",
+      "date_expiry_groups": 13,
+      "scored_groups": 13,
+      "n_expected": 13,
+      "n_scored": 13,
+      "n_refused": 0,
+      "macro_mean_rmse_total_variance": 0.010190794311059997,
+      "macro_mean_rmse_iv_pp": 5.648028062210386,
+      "macro_mean_rmse_normalized_call": 0.0017790816940110533
+    },
+    {
+      "model": "raw_svi",
+      "domain": "common_interior",
+      "date_expiry_groups": 27,
+      "scored_groups": 27,
+      "n_expected": 182,
+      "n_scored": 182,
+      "n_refused": 0,
+      "macro_mean_rmse_total_variance": 0.0024377673308388814,
+      "macro_mean_rmse_iv_pp": 1.8418397882095126,
+      "macro_mean_rmse_normalized_call": 0.0009287802081720039
+    },
+    {
+      "model": "raw_svi",
+      "domain": "interior",
+      "date_expiry_groups": 27,
+      "scored_groups": 27,
+      "n_expected": 182,
+      "n_scored": 182,
+      "n_refused": 0,
+      "macro_mean_rmse_total_variance": 0.0024377673308388814,
+      "macro_mean_rmse_iv_pp": 1.8418397882095126,
+      "macro_mean_rmse_normalized_call": 0.0009287802081720039
+    }
+  ],
+  "prediction_status_counts": [
+    {
+      "model": "convex_call",
+      "status": "ok",
+      "rows": 182
+    },
+    {
+      "model": "convex_call",
+      "status": "unsupported_extrapolation",
+      "rows": 13
+    },
+    {
+      "model": "joint_ssvi",
+      "status": "ok",
+      "rows": 195
+    },
+    {
+      "model": "quadratic",
+      "status": "ok",
+      "rows": 195
+    },
+    {
+      "model": "raw_svi",
+      "status": "ok",
+      "rows": 195
+    }
+  ],
+  "method_manifest_sha256": "bccaf1fc4e535143bcbb88e7208557b9ccb8714ab7854349ac5958a468321185",
+  "environment": {
+    "python": "3.11.17",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1"
+  },
+  "scope": "Retrospective adjacent-day convenience archive; reconstructed variance under zero USD discount and recorded underlying convention; not venue mark-IV, forecasts, executable arbitrage or realized PnL",
+  "theorem_scope": "SSVI mathematical sufficient conditions under idealized assumptions; observed market forwards/discounting/tails unverified",
+  "uncertainty": "No independent-date inferential intervals or significance claims",
+  "prior_results": "Original September 2026 calibration/density/27 hedge scenarios unchanged"
+}

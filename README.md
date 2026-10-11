@@ -99,3 +99,14 @@ This command intentionally retrieves the current public Deribit option market. I
 No trading alpha, realized option P&L, executable spread, persistent market mispricing, economically meaningful raw-SVI parameter interpretation, or mathematically guaranteed globally arbitrage-free surface is claimed.
 
 The complete adversarial interpretation is in [`docs/RESULTS_AUDIT.md`](docs/RESULTS_AUDIT.md). See also [`docs/RESEARCH_PROTOCOL.md`](docs/RESEARCH_PROTOCOL.md), [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md), and [`docs/VALIDATION.md`](docs/VALIDATION.md).
+
+
+## Registered nine-date shape comparison — 2026-10-11
+
+The separate CC0 December 2018 study accounts for **1,868 raw rows**, **27 eligible date/expiry groups** and **195 held-out strikes** across raw SVI, quadratic variance, convex call prices and joint constrained SSVI. One registered date stays missing; premiums are inverted under an explicit research convention because venue mark IV is absent.
+
+On the **182 common-interior strikes**, mean per-group IV RMSE is **1.84 pp raw SVI** versus **3.98 pp SSVI**. Raw SVI fails **23/27** wider density and **15/18** wider calendar checks; SSVI passes the registered grids and idealized sufficient conditions with worse fit. The convex baseline refuses all **13 boundary predictions**. These adverse outcomes, source/forward assumptions and all four methods are retained.
+
+[Full methods and balanced results](docs/MULTIDATE_SHAPE_REVIEW.md) · [Frozen outputs](reference/multidate_shape/results/summary.json) · [Amended pre-fit registration](docs/MULTIDATE_SCHEMA_AMENDMENT.md) · [Full comparison CI](https://github.com/Prasanna-K-123/volatility-surface-model-risk/actions/workflows/multidate-shape.yml)
+
+`python run_multidate_shape.py --workers 4` then `python verify_multidate_shape.py` reruns all available dates from pinned inputs. All **45 tests** pass. This is dependent retrospective convenience data and reconstructed research variance, not a forecast, validated venue IV, executable arbitrage or realized PnL. The original September 2026 and hedging evidence above remains intact.

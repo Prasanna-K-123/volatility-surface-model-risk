@@ -1,0 +1,382 @@
+[
+  {
+    "day": "2018-12-16",
+    "expiry": "2018-12-28T08:00:00+00:00",
+    "model": "raw_svi",
+    "phase": "holdout",
+    "status": "ok",
+    "solver": {
+      "success": true
+    },
+    "T_years": 0.03251169290440337,
+    "support_min": -0.3583952411563722,
+    "support_max": 0.48890261923083134,
+    "params": {
+      "a": -1.2674449865778588,
+      "b": 0.7026642743309227,
+      "rho": -0.5417417381936913,
+      "m": -1.358395241156372,
+      "sigma": 2.1892170517002043
+    }
+  },
+  {
+    "day": "2018-12-16",
+    "expiry": "2018-12-28T08:00:00+00:00",
+    "model": "quadratic",
+    "phase": "holdout",
+    "status": "ok",
+    "solver": {
+      "success": true
+    },
+    "T_years": 0.03251169290440337,
+    "support_min": -0.3583952411563722,
+    "support_max": 0.48890261923083134,
+    "coefficients": [
+      0.09484942021160957,
+      -0.012761395396016525,
+      0.026035833238810768
+    ]
+  },
+  {
+    "day": "2018-12-16",
+    "expiry": "2018-12-28T08:00:00+00:00",
+    "model": "convex_call",
+    "phase": "holdout",
+    "status": "ok",
+    "solver": {
+      "success": true,
+      "status": 0,
+      "iterations": 13,
+      "message": "Optimization terminated successfully",
+      "objective": 3.51594774633736e-15,
+      "constraint_error": 0.0,
+      "mark_call_adjustment_rmse": 1.032743769904883e-09
+    },
+    "T_years": 0.03251169290440337,
+    "support_min": -0.3583952411563722,
+    "support_max": 0.48890261923083134,
+    "k": [
+      -0.3583952411563722,
+      -0.15772454569422106,
+      0.009329538968945155,
+      0.1524303826096185,
+      0.2775935255636244,
+      0.38881916067384875,
+      0.48890261923083134
+    ],
+    "calls": [
+      0.30421361877112046,
+      0.16081330884534462,
+      0.06064006018065893,
+      0.017416919615555814,
+      0.004314392474141901,
+      0.0015052237738729806,
+      0.000802711249488738
+    ]
+  },
+  {
+    "day": "2018-12-16",
+    "expiry": "2018-12-28T08:00:00+00:00",
+    "model": "joint_ssvi",
+    "phase": "holdout",
+    "status": "ok",
+    "solver": {
+      "success": true,
+      "attempts": [
+        {
+          "start": 0,
+          "success": true,
+          "status": 2,
+          "cost": 0.005242213094193326,
+          "nfev": 9,
+          "message": "`ftol` termination condition is satisfied."
+        },
+        {
+          "start": 1,
+          "success": true,
+          "status": 2,
+          "cost": 0.005242213094193327,
+          "nfev": 7,
+          "message": "`ftol` termination condition is satisfied."
+        },
+        {
+          "start": 2,
+          "success": true,
+          "status": 2,
+          "cost": 0.005242213094193325,
+          "nfev": 7,
+          "message": "`ftol` termination condition is satisfied."
+        }
+      ]
+    },
+    "T_years": 0.03251169290440337,
+    "support_min": -0.3583952411563722,
+    "support_max": 0.48890261923083134,
+    "theta": 0.026051076900184284,
+    "rho": -0.11328876329254013,
+    "eta": 0.7560629698979693,
+    "certificate": {
+      "rho": -0.11328876329254013,
+      "eta": 0.7560629698979693,
+      "eta_times_one_plus_abs_rho": 0.8417164087289952,
+      "max_theta_phi_times_skew": 0.34695551695426813,
+      "max_theta_phi_squared_times_skew": 0.6202328735116235,
+      "theta_nondecreasing": true,
+      "theorem_scope": "Idealized SSVI; all k, fitted/interpolated maturities; not venue execution or tail validation"
+    }
+  },
+  {
+    "day": "2018-12-16",
+    "expiry": "2019-01-25T08:00:00+00:00",
+    "model": "raw_svi",
+    "phase": "holdout",
+    "status": "ok",
+    "solver": {
+      "success": true
+    },
+    "T_years": 0.10917151494410221,
+    "support_min": -0.25303472549854594,
+    "support_max": 0.6224340118553541,
+    "params": {
+      "a": 0.09140773056005518,
+      "b": 0.017590422705174073,
+      "rho": -0.06803128134593896,
+      "m": -0.05033061185403171,
+      "sigma": 0.00010000000000000063
+    }
+  },
+  {
+    "day": "2018-12-16",
+    "expiry": "2019-01-25T08:00:00+00:00",
+    "model": "quadratic",
+    "phase": "holdout",
+    "status": "ok",
+    "solver": {
+      "success": true
+    },
+    "T_years": 0.10917151494410221,
+    "support_min": -0.25303472549854594,
+    "support_max": 0.6224340118553541,
+    "coefficients": [
+      0.009701353587280581,
+      0.00690956383561611,
+      0.09414001089180722
+    ]
+  },
+  {
+    "day": "2018-12-16",
+    "expiry": "2019-01-25T08:00:00+00:00",
+    "model": "convex_call",
+    "phase": "holdout",
+    "status": "ok",
+    "solver": {
+      "success": true,
+      "status": 0,
+      "iterations": 16,
+      "message": "Optimization terminated successfully",
+      "objective": 1.5181036833076559e-13,
+      "constraint_error": 0.0,
+      "mark_call_adjustment_rmse": 1.4676341732825134e-08
+    },
+    "T_years": 0.10917151494410221,
+    "support_min": -0.25303472549854594,
+    "support_max": 0.6224340118553541,
+    "k": [
+      -0.25303472549854594,
+      -0.07071316870459128,
+      0.08343751112266694,
+      0.21696890374718958,
+      0.33475193940357306,
+      0.4401124550613994,
+      0.5354226348657243,
+      0.6224340118553541
+    ],
+    "calls": [
+      0.2548834205656937,
+      0.15355975938324812,
+      0.08680794400682112,
+      0.047955340286364036,
+      0.027379702352056345,
+      0.01706207593640636,
+      0.006823649450548373,
+      0.004013686819831823
+    ]
+  },
+  {
+    "day": "2018-12-16",
+    "expiry": "2019-01-25T08:00:00+00:00",
+    "model": "joint_ssvi",
+    "phase": "holdout",
+    "status": "ok",
+    "solver": {
+      "success": true,
+      "attempts": [
+        {
+          "start": 0,
+          "success": true,
+          "status": 2,
+          "cost": 0.005242213094193326,
+          "nfev": 9,
+          "message": "`ftol` termination condition is satisfied."
+        },
+        {
+          "start": 1,
+          "success": true,
+          "status": 2,
+          "cost": 0.005242213094193327,
+          "nfev": 7,
+          "message": "`ftol` termination condition is satisfied."
+        },
+        {
+          "start": 2,
+          "success": true,
+          "status": 2,
+          "cost": 0.005242213094193325,
+          "nfev": 7,
+          "message": "`ftol` termination condition is satisfied."
+        }
+      ]
+    },
+    "T_years": 0.10917151494410221,
+    "support_min": -0.25303472549854594,
+    "support_max": 0.6224340118553541,
+    "theta": 0.08774185445883301,
+    "rho": -0.11328876329254013,
+    "eta": 0.7560629698979693,
+    "certificate": {
+      "rho": -0.11328876329254013,
+      "eta": 0.7560629698979693,
+      "eta_times_one_plus_abs_rho": 0.8417164087289952,
+      "max_theta_phi_times_skew": 0.34695551695426813,
+      "max_theta_phi_squared_times_skew": 0.6202328735116235,
+      "theta_nondecreasing": true,
+      "theorem_scope": "Idealized SSVI; all k, fitted/interpolated maturities; not venue execution or tail validation"
+    }
+  },
+  {
+    "day": "2018-12-16",
+    "expiry": "2019-03-29T08:00:00+00:00",
+    "model": "raw_svi",
+    "phase": "holdout",
+    "status": "ok",
+    "solver": {
+      "success": true
+    },
+    "T_years": 0.2816561145334246,
+    "support_min": -0.46362080227651237,
+    "support_max": 0.6349914863915974,
+    "params": {
+      "a": -1.5931526245237002,
+      "b": 1.2369172846739118,
+      "rho": 0.6161046034068031,
+      "m": 1.5822998343091885,
+      "sigma": 1.8363536911266163
+    }
+  },
+  {
+    "day": "2018-12-16",
+    "expiry": "2019-03-29T08:00:00+00:00",
+    "model": "quadratic",
+    "phase": "holdout",
+    "status": "ok",
+    "solver": {
+      "success": true
+    },
+    "T_years": 0.2816561145334246,
+    "support_min": -0.46362080227651237,
+    "support_max": 0.6349914863915974,
+    "coefficients": [
+      0.15993367229138303,
+      -0.036617054999814394,
+      0.19832416343126963
+    ]
+  },
+  {
+    "day": "2018-12-16",
+    "expiry": "2019-03-29T08:00:00+00:00",
+    "model": "convex_call",
+    "phase": "holdout",
+    "status": "ok",
+    "solver": {
+      "success": true,
+      "status": 0,
+      "iterations": 7,
+      "message": "Optimization terminated successfully",
+      "objective": 1.5251388992820407e-14,
+      "constraint_error": 0.0,
+      "mark_call_adjustment_rmse": 1.7170482319598937e-08
+    },
+    "T_years": 0.2816561145334246,
+    "support_min": -0.46362080227651237,
+    "support_max": 0.6349914863915974,
+    "k": [
+      -0.46362080227651237,
+      -0.2404772509623025,
+      -0.058155694168347906,
+      0.09599498565891046,
+      0.22952637828343295,
+      0.34730941393981646,
+      0.6349914863915974
+    ],
+    "calls": [
+      0.40795212053389446,
+      0.2919854570947752,
+      0.2027761950861668,
+      0.13903615184219412,
+      0.09481231747077455,
+      0.06613513016838447,
+      0.030519692054899985
+    ]
+  },
+  {
+    "day": "2018-12-16",
+    "expiry": "2019-03-29T08:00:00+00:00",
+    "model": "joint_ssvi",
+    "phase": "holdout",
+    "status": "ok",
+    "solver": {
+      "success": true,
+      "attempts": [
+        {
+          "start": 0,
+          "success": true,
+          "status": 2,
+          "cost": 0.005242213094193326,
+          "nfev": 9,
+          "message": "`ftol` termination condition is satisfied."
+        },
+        {
+          "start": 1,
+          "success": true,
+          "status": 2,
+          "cost": 0.005242213094193327,
+          "nfev": 7,
+          "message": "`ftol` termination condition is satisfied."
+        },
+        {
+          "start": 2,
+          "success": true,
+          "status": 2,
+          "cost": 0.005242213094193325,
+          "nfev": 7,
+          "message": "`ftol` termination condition is satisfied."
+        }
+      ]
+    },
+    "T_years": 0.2816561145334246,
+    "support_min": -0.46362080227651237,
+    "support_max": 0.6349914863915974,
+    "theta": 0.20468698361346752,
+    "rho": -0.11328876329254013,
+    "eta": 0.7560629698979693,
+    "certificate": {
+      "rho": -0.11328876329254013,
+      "eta": 0.7560629698979693,
+      "eta_times_one_plus_abs_rho": 0.8417164087289952,
+      "max_theta_phi_times_skew": 0.34695551695426813,
+      "max_theta_phi_squared_times_skew": 0.6202328735116235,
+      "theta_nondecreasing": true,
+      "theorem_scope": "Idealized SSVI; all k, fitted/interpolated maturities; not venue execution or tail validation"
+    }
+  }
+]
