@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "first_design_commit": "00c60fff7fcb57a5961116ddeae344832e2ff5a0",
+  "source_collection_commit": "968cf38bce5fb23ef4ff4076ca2265df0ffb9a9d",
+  "registration": "Complete implementation before all variance inversion and comparison fits",
+  "replay_float_rtol": 0.0002,
+  "replay_float_atol": 1e-08,
+  "replay_identity_status_count": "exact",
+  "sha256": {
+    "docs/MULTIDATE_SHAPE_PROTOCOL.md": "d7aad01ec626969303d8120d4f688489748f9c6628b3c5d354d38243507ed5dd",
+    "docs/MULTIDATE_SCHEMA_AMENDMENT.md": "aa442be195c087b94a8173587cb522f79df3beaba90c1abc0f37cb45371cc37b",
+    "reference/multidate_shape/design.json": "8028c64cf8af7389b996f2c1d9107d74c2e7ec5561a75c401b243e73822ecb30",
+    "src/vol_surface/shape_models.py": "a3f0435e7471a7ae43875aca72c571fdc1bf7191d238ce7e2920e514136b0f46",
+    "src/vol_surface/multidate_data.py": "276e81b6efeb02d493950c1a0428a18fa695175dd5c50efda2ed9bfb91d7a518",
+    "src/vol_surface/svi.py": "ee038e63cafa2f0b22c81231e615b864b01086fc889838b826f83de7d2007b39",
+    "src/vol_surface/density.py": "76fd66f3c674c9085fbbb92006a2f579ea313754a13c008d517a2ad4c20e8a39",
+    "run_multidate_shape.py": "6684572fa67582e09b15c99c21ec6ae03c60a13628a0370cc4d5cc62a0215aae",
+    "verify_multidate_shape.py": "fd6a1a17778fb0012965a7f82d3d9f22e8ddd794b0cdc5d642235658fbecdf27",
+    "extract_multidate_inputs.py": "73c3df6e930fca06bc2aa541bda7f6fb3c77a31a2ff267f1dd5f8cbe23cf85e9",
+    "tests/test_shape_models.py": "50661d76d59c6660f0608806e3ce0e6dccaeb9217e5280c7c3d20e6db8f206b4",
+    "tests/test_multidate_inputs.py": "ac5129e815d3ca974a3df6263f1b882014f0c4a4fbd6a84edfc2ee6cdd64dbac",
+    ".github/workflows/multidate-shape.yml": "332762fb34fdf2f0865d9b0b496fa94eecc9c9900bf6e80f6f0dd252e72bfb59"
+  }
+}

@@ -1,0 +1,46 @@
+name: Registered multidate shape comparison
+on:
+  push:
+    branches: [main, research/multidate-shape-20261011]
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'reference/multidate_shape/**'
+      - 'run_multidate_shape.py'
+      - 'verify_multidate_shape.py'
+      - '.github/workflows/multidate-shape.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install -e .
+      - name: All historical and new unit tests
+        run: python -m pytest tests -q
+      - name: Full registered nine-date comparison
+        run: python run_multidate_shape.py --workers 4
+      - name: Every result row and frozen full reference
+        run: python verify_multidate_shape.py
+      - name: Upload actual comparison evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: multidate-shape-comparison
+          path: results/multidate_shape
+          retention-days: 30

@@ -2,6 +2,10 @@ name: Multidate source registration and metadata
 on:
   push:
     branches: [research/multidate-shape-20261011]
+    paths:
+      - 'inspect_multidate_source.py'
+      - 'collect_multidate_archive.py'
+      - '.github/workflows/multidate-source.yml'
   workflow_dispatch:
 permissions:
   contents: read

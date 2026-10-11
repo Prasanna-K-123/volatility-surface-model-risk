@@ -1,0 +1,90 @@
+{
+  "source_doi": "10.17632/hfd4b8zfw6.2",
+  "licence": "CC0-1.0",
+  "archive_bytes": 17375878,
+  "archive_sha256": "69bb91c9640376a9065b97b2b472bc60c11819b8ffba6c1d66ac66d9291ab9e2",
+  "target_days": [
+    "2018-12-09",
+    "2018-12-10",
+    "2018-12-11",
+    "2018-12-12",
+    "2018-12-13",
+    "2018-12-14",
+    "2018-12-15",
+    "2018-12-16",
+    "2018-12-17",
+    "2018-12-18"
+  ],
+  "selected_members": {
+    "2018-12-09": null,
+    "2018-12-10": "deribit_data_20181210-120003.txt",
+    "2018-12-11": "deribit_data_20181211-120003.txt",
+    "2018-12-12": "deribit_data_20181212-120003.txt",
+    "2018-12-13": "deribit_data_20181213-120004.txt",
+    "2018-12-14": "deribit_data_20181214-120018.txt",
+    "2018-12-15": "deribit_data_20181215-120003.txt",
+    "2018-12-16": "deribit_data_20181216-120009.txt",
+    "2018-12-17": "deribit_data_20181217-120004.txt",
+    "2018-12-18": "deribit_data_20181218-120504.txt"
+  },
+  "source_clock_window": "[12:00,12:15), timezone undocumented; explicit created GMT used separately",
+  "selected_source_sha256": "d21af4cc356be0ce75ed3d3865814d8fa1595cea9a71268e547e6225f655cd44",
+  "input_sha256": "137cffb2923ac7e38047c3001fe58cee5576543e7b946450f25cbd02155234ac",
+  "selected_member_proofs": [
+    {
+      "day": "2018-12-10",
+      "member": "deribit_data_20181210-120003.txt",
+      "bytes": 68253,
+      "sha256": "d5123001692b45a78e66a69c357d923b6035f2e15358b66c9c4139b2d08abab2"
+    },
+    {
+      "day": "2018-12-11",
+      "member": "deribit_data_20181211-120003.txt",
+      "bytes": 68244,
+      "sha256": "e9ef78ce6e86c078920a8cd3cec843b5d5fc2551517d419b0c37cbba360cc3fe"
+    },
+    {
+      "day": "2018-12-12",
+      "member": "deribit_data_20181212-120003.txt",
+      "bytes": 68295,
+      "sha256": "96c23908bb559d122cec6713badd13c9747bc14578cafad045aebe16c50282ea"
+    },
+    {
+      "day": "2018-12-13",
+      "member": "deribit_data_20181213-120004.txt",
+      "bytes": 73267,
+      "sha256": "6c85f261268305cb9e1c50feffd6d872ab6edfe93791d6645a6970355938d3f2"
+    },
+    {
+      "day": "2018-12-14",
+      "member": "deribit_data_20181214-120018.txt",
+      "bytes": 66997,
+      "sha256": "d492e398ad80ed2a2e643a1f8ac2cf04e3bc21a8a2a963465af18b22f6c40d00"
+    },
+    {
+      "day": "2018-12-15",
+      "member": "deribit_data_20181215-120003.txt",
+      "bytes": 66989,
+      "sha256": "5f1f3bb16cbb8a80edafa4f88253c8c0db3b587615841a72b7bb68e7b90db1ab"
+    },
+    {
+      "day": "2018-12-16",
+      "member": "deribit_data_20181216-120009.txt",
+      "bytes": 66777,
+      "sha256": "b83062c48deab52edb19ff191fe9f0d715e64d8b55d4b885c48185c6a10ba463"
+    },
+    {
+      "day": "2018-12-17",
+      "member": "deribit_data_20181217-120004.txt",
+      "bytes": 66848,
+      "sha256": "e430b14edf5dfa08a6852d0d7a4bf15f040d1a55d843b853cb96d63eb96e8982"
+    },
+    {
+      "day": "2018-12-18",
+      "member": "deribit_data_20181218-120504.txt",
+      "bytes": 67016,
+      "sha256": "c10b4d804bdf3a61f9b2c8416d8b7b65ac6fa6b74c9c5a1e99399bcdc357d8a2"
+    }
+  ],
+  "model_execution": false
+}
