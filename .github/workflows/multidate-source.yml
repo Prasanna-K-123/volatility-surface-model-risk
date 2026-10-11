@@ -1,0 +1,25 @@
+name: Multidate source registration and metadata
+on:
+  push:
+    branches: [research/multidate-shape-20261011]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Inspect public archive metadata without observations
+        run: python inspect_multidate_source.py
+      - name: Retain source-resolution evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: multidate-source-metadata
+          path: results/multidate_source_metadata
+          retention-days: 30
