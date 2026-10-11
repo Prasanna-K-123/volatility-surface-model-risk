@@ -16,6 +16,10 @@ jobs:
           python-version: '3.11'
       - name: Inspect public archive metadata without observations
         run: python inspect_multidate_source.py
+      - name: Collect registered CC0 archive and inspect schema only
+        run: |
+          python -m pip install libarchive-c==5.3
+          python collect_multidate_archive.py
       - name: Retain source-resolution evidence
         if: always()
         uses: actions/upload-artifact@v4

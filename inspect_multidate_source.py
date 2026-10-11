@@ -5,9 +5,8 @@ import urllib.request
 from pathlib import Path
 
 URLS = [
-    'https://data.mendeley.com/public-api/datasets/hfd4b8zfw6/versions/2',
-    'https://data.mendeley.com/public-api/datasets/hfd4b8zfw6/files?version=2',
-    'https://data.mendeley.com/public-api/datasets/hfd4b8zfw6/versions/2/files',
+    'https://data.mendeley.com/public-api/datasets/hfd4b8zfw6/files?folder_id=root&version=2',
+    'https://data.mendeley.com/public-api/datasets/hfd4b8zfw6?version=2',
 ]
 
 def main():
@@ -27,7 +26,10 @@ def main():
     Path('results/multidate_source_metadata').mkdir(parents=True, exist_ok=True)
     Path('results/multidate_source_metadata/metadata.json').write_text(json.dumps(rows, indent=2)+'\n')
     print('MULTIDATE_SOURCE_METADATA_JSON='+json.dumps(rows, separators=(',', ':')))
-    if not any(row.get('status') == 200 for row in rows):
+    if not any(row.get('status') == 200 and row.get('metadata') and
+               (isinstance(row['metadata'], list) or
+                (isinstance(row['metadata'], dict) and 'error' not in row['metadata']
+                 and 'non_json_excerpt' not in row['metadata'])) for row in rows):
         raise RuntimeError('No public source metadata resolved; no data downloaded')
 
 if __name__ == '__main__':
